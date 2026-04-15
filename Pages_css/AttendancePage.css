@@ -1,0 +1,158 @@
+:root {
+  --bg: #9be59d;
+  --card: #ffffff;
+  --muted: #6c757d;
+  --text: #212529;
+  --border: #dee2e6;
+  --success: #28a745;
+  --error: #dc3545;
+  --warning: #ffc107;
+  --shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  --radius: 8px;
+  --font: 'Inter', system-ui, Arial, sans-serif;
+}
+
+body {
+  background: var(--bg);
+}
+
+.page-wrap {
+  padding: 28px 20px;
+  font-family: var(--font);
+  min-height: 100vh;
+  background: var(--bg);
+  box-sizing: border-box;
+  color: var(--text);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  height: 64px;
+  padding: 0 20px;
+  background: var(--card);
+  border-bottom: 1px solid var(--border);
+  box-shadow: var(--shadow);
+}
+
+.back-wrapper {
+  position: absolute;
+  left: 20px;
+}
+
+.page-title {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.content {
+  max-width: 1000px;
+  margin: 18px auto;
+}
+
+.filter-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  padding: 10px;
+  background: var(--card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.filter-bar label {
+  font-weight: 500;
+  color: var(--text);
+}
+
+.filter-bar select {
+  padding: 8px 12px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--card);
+  font-size: 14px;
+}
+
+.summary-bar {
+  display: flex;
+  gap: 12px;
+  margin-top: 12px;
+  flex-wrap: wrap;
+}
+
+.summary-item {
+  background: var(--card);
+  padding: 12px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  min-width: 140px;
+  text-align: center;
+  box-shadow: var(--shadow);
+}
+
+.summary-item strong {
+  display: block;
+  font-size: 18px;
+  color: var(--text);
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.day-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  padding: 12px;
+  border-radius: var(--radius);
+  text-align: center;
+  box-shadow: var(--shadow);
+}
+
+.day-card.present {
+  border-left: 6px solid var(--success);
+}
+
+.day-card.absent {
+  border-left: 6px solid var(--error);
+}
+
+.day-card.late {
+  border-left: 6px solid var(--warning);
+}
+
+.d-date {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.d-status {
+  font-weight: 700;
+  margin-top: 6px;
+}
+
+.d-hours {
+  font-size: 13px;
+  color: var(--text);
+  margin-top: 6px;
+}
+
+@media (max-width: 800px) {
+  .calendar-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .calendar-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

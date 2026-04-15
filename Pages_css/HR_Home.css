@@ -1,0 +1,71 @@
+:root {
+  --bg: #9be59d;
+  --card: #ffffff;
+  --muted: #6c757d;
+  --text: #212529;
+  --border: #dee2e6;
+  --shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  --radius: 8px;
+  --font: 'Inter', system-ui, Arial, sans-serif;
+}
+
+body {
+  background: var(--bg);
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  background: var(--bg);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.HR-Home-box {
+  width: 380px;
+  background: var(--card);
+  padding: 40px;
+  border-radius: 50px;
+  box-shadow: var(--shadow);
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.icon-row {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  margin: 40px 0;
+}
+
+.icon-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+  outline: none;
+  background-color: #54fa70d8;
+  padding: 25px;
+  border-radius: 15px;
+  transition: background-color 0.2s ease;
+}
+
+.icon-container:hover,
+.icon-container:focus {
+  background-color:#00b321de;
+  color: #fff;
+}
+
+.icon {
+  font-size: 80px;
+  margin-bottom: 12px;
+}
+
+.icon-label {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--text);
+}

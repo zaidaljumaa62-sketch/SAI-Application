@@ -1,0 +1,121 @@
+:root {
+  --bg: #9be59d;
+  --card: #ffffff;
+  --muted: #6c757d;
+  --accent: #007bff;
+  --text: #212529;
+  --border: #dee2e6;
+  --shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  --radius: 8px;
+  --font: 'Inter', system-ui, Arial, sans-serif;
+}
+
+body {
+  background: var(--bg);
+}
+
+.page-wrap {
+  padding: 28px 20px;
+  font-family: var(--font);
+  min-height: 100vh;
+  background: var(--bg);
+  box-sizing: border-box;
+  color: var(--text);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.back-wrapper {
+  position: absolute;
+  left: 12px;
+}
+
+.page-title {
+  margin: 0;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.content {
+  max-width: 1000px;
+  margin: 18px auto;
+}
+
+.filter-bar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 18px;
+  padding: 12px;
+  background: var(--card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.filter-bar label {
+  font-weight: 600;
+  color: var(--text);
+}
+
+.filter-bar select {
+  padding: 6px 12px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  background: var(--card);
+  color: var(--text);
+}
+
+.reminder-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 12px;
+  background: rgba(255, 255, 255, 0.6);
+  padding: 12px;
+  border-radius: var(--radius);
+}
+
+.reminder-form input {
+  padding: 10px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--card);
+}
+
+.reminder-form button {
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  padding: 10px 12px;
+  border-radius: var(--radius);
+  cursor: pointer;
+}
+
+.cards {
+  margin-top: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  padding: 14px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.card-title {
+  font-weight: 700;
+}
+
+.card-deadline {
+  font-size: 12px;
+  color: var(--muted);
+}

@@ -1,0 +1,44 @@
+:root {
+  --card: #ffffff;
+  --text: #212529;
+  --shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  --radius: 8px;
+}
+
+.back-button {
+  background: var(--card);
+  border: none;
+  width: 56px;
+  height: 56px;
+  border-radius: 25px;
+  font-size: 32px;
+  color: var(--text);
+  box-shadow: var(--shadow);
+  cursor: pointer;
+  transition: box-shadow 0.2s ease;
+}
+
+.back-button:hover {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+.intern-info-page {
+  position: fixed;
+  top: 37.5px;
+  left: 57.5px;
+  background: var(--card);
+  border: none;
+  width: 56px;
+  height: 56px;
+  border-radius: 25px;
+  font-size: 32px;
+  color: var(--text);
+  cursor: pointer;
+  z-index: 1000;
+  box-shadow: var(--shadow);
+  transition: box-shadow 0.2s ease;
+}
+
+.intern-info-page:hover {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
